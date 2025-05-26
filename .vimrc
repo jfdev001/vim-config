@@ -30,7 +30,7 @@ endif
 
 if !filereadable(expand('~/.vim/bundle/comments.vim'))
     echo "wget the comments"
-    !wget https://github.com/jfdev001/vim-config/raw/refs/heads/main/comments.vim -O ~/.vim/bundle/comments.vim
+    !curl -L https://github.com/jfdev001/vim-config/raw/refs/heads/main/comments.vim -o ~/.vim/bundle/comments.vim
 else
     source ~/.vim/bundle/comments.vim
 endif
