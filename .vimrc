@@ -42,6 +42,15 @@ syntax on
 filetype plugin on " due to julia
 let g:latex_to_unicode_auto = 1 " for julia
 
+" ALE configuration                                                                         
+" https://github.com/dense-analysis/ale?tab=readme-ov-file#fixing                           
+" https://github.com/dense-analysis/ale/issues/1518                                         
+" https://github.com/dense-analysis/ale/issues/1522                                         
+let b:ale_fixers = {'python' : ['autopep8']}                                                
+                                                                                            
+" Set this variable to 1 to fix files when you save them.                                   
+let g:ale_fix_on_save = 1         
+
 " Minimalist commands (i.e., no syntax related support) 
 set tabstop=4 shiftwidth=4 expandtab
 set number
