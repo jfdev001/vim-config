@@ -42,7 +42,8 @@ syntax on
 filetype plugin on " due to julia
 let g:latex_to_unicode_auto = 1 " for julia
 
-" ALE configuration                                                                         
+" ALE configuration
+" Must have fixers/linters!!! : pip install autopep8 and pip install flake8
 " https://github.com/dense-analysis/ale?tab=readme-ov-file#fixing                           
 " https://github.com/dense-analysis/ale/issues/1518                                         
 " https://github.com/dense-analysis/ale/issues/1522                                         
