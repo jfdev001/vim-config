@@ -14,6 +14,7 @@ if isdirectory(expand('~/.vim/bundle/Vundle.vim'))
     Plugin 'JuliaEditorSupport/julia-vim'
     Plugin 'davidhalter/jedi-vim'
     Plugin 'wellle/tmux-complete.vim'
+    Plugin 'dense-analysis/ale'
 
     " add all your plugins here (note older versions of Vundle
     " used Bundle instead of Plugin)
