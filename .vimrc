@@ -47,7 +47,10 @@ let g:latex_to_unicode_auto = 1 " for julia
 " https://github.com/dense-analysis/ale?tab=readme-ov-file#fixing                           
 " https://github.com/dense-analysis/ale/issues/1518                                         
 " https://github.com/dense-analysis/ale/issues/1522                                         
-let b:ale_fixers = {'python' : ['autopep8']}                                                
+let b:ale_fixers = {'python' : ['autopep8']}
+
+let g:ale_fortran_gcc_executable = 'gfortran'
+let g:ale_fortran_gcc_options = '-Wall -cpp' " Supress warn on preproc directive
                                                                                             
 " Set this variable to 1 to fix files when you save them.                                   
 let g:ale_fix_on_save = 1         
