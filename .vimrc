@@ -29,12 +29,23 @@ else
     echo "Make sure to call :PluginInstall"
 endif 
 
+" For easy (and customizable) commenting with CTRL + C and CTRL + X 
 if !filereadable(expand('~/.vim/bundle/comments.vim'))
     echo "wget the comments"
     !curl -L https://github.com/jfdev001/vim-config/raw/refs/heads/main/comments.vim -o ~/.vim/bundle/comments.vim
 else
     source ~/.vim/bundle/comments.vim
 endif
+
+" Show count matching plugin if older vim version
+" https://stackoverflow.com/questions/4668623/show-count-of-matches-in-vim                  
+if !filereadable(expand('~/.vim/bundle/searchindex.vim'))                                   
+    if v:version < 801 || v:version == 801 && !has("patch1270")                             
+        !curl -L https://raw.githubusercontent.com/google/vim-searchindex/refs/heads/master/plugin/searchindex.vim -o ~/.vim/bundle/searchindex.vim
+    endif                                                                                   
+else                                                                                        
+    source ~/.vim/bundle/searchindex.vim                                                    
+endif          
 
 set encoding=utf-8
 syntax on
